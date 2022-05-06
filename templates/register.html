@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/register.css" type="text/css">
+    <script src="../static/login.js" rel="stylesheet" type="text/javascript"></script>
+    <script src="../static/register.js" rel="stylesheet" type="text/javascript"></script>
+</head>
+<body>
+<div class="login-body">
+    <div class="field has-addons">
+        <div class="control has-icons-left" style="width:100%">
+            <input id="username1" type="text" placeholder="이름">
+        </div>
+    </div>
+    <div class="field has-addons">
+        <div class="control has-icons-left" style="width:100%">
+            <input id="input-email" class="input" type="text" placeholder="이메일">
+            <span class="icon is-small is-left"><i class="fa fa-user"></i></span>
+        </div>
+    </div>
+    <div class="field has-addons">
+        <div class="control has-icons-left" style="width:100%">
+            <input id="input-id" class="input" type="text" placeholder="아이디">
+            <span class="icon is-small is-left"><i class="fa fa-user"></i></span>
+        </div>
+        <div id="" class="control">
+            <button class="" onclick="check_dup()">중복확인</button>
+        </div>
+    </div>
+    <div class="field">
+        <div class="control has-icons-left">
+            <input id="input-password" class="input" type="password" placeholder="비밀번호">
+            <span class="icon is-small is-left"><i class="fa fa-lock"></i></span>
+            <input id="input-password2" class="input" type="password" placeholder="비밀번호 재확인">
+        </div>
+    </div>
+    <hr>
+    <div id="sign-up-box">
+        <a id="sign-up-btn" onclick="sign_up1()">
+            회원가입
+        </a>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
