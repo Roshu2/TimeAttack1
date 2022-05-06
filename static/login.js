@@ -1,6 +1,6 @@
 function sign_in() {
-    let username = $("#input-username").val()
-    let password = $("#input-password").val()
+    let username = $("#input-user").val()
+    let password = $("#input-pw").val()
 
     if (username == "") {
         $("#help-id-login").text("아이디를 입력해주세요.")
@@ -26,8 +26,8 @@ function sign_in() {
         },
         success: function (response) {
             if (response['result'] == 'success') {
-                $.cookie('mytoken', response['token'], {path: '/'});
-                window.location.replace("/")
+                $.cookie('mytoken', response['token'], {path: '/login'});
+                window.location.replace("/login")
             } else {
                 alert(response['msg'])
             }

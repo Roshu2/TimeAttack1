@@ -30,7 +30,7 @@ db = client.timeattack
 #     except jwt.exceptions.DecodeError:
 #         return redirect(url_for("login", msg="로그인 정보가 존재하지 않습니다."))
 
-@app.route('/')
+@app.route('/login')
 def login():
     return render_template('login.html')
 
@@ -66,7 +66,7 @@ def sign_in():
 
     if result is not None:
         payload = {
-         'id': username_receive,
+         'id': str(result["_id"]),
          'exp': datetime.utcnow() + timedelta(seconds=60 * 60 * 24)  # 로그인 24시간 유지
         }
         token = jwt.encode(payload, SECRET_KEY, algorithm='HS256').decode('utf-8')
